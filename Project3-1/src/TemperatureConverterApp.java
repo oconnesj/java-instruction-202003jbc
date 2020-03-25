@@ -24,10 +24,11 @@ public class TemperatureConverterApp {
 		
 		System.out.print("Continue?" + " "+ "(y/n): ");
 		choice = sc.next();
-		sc.close();
 	
 	}
 		System.out.println();
 		System.out.println("Thank You for using Temperature Converter");
+		sc.close();
+
 	}
 }

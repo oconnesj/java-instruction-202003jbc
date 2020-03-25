@@ -28,10 +28,11 @@ public class RectangleCalculatorApp {
 			
 			System.out.println("Continue?" + " "+ "(y/n): ");
 			choice = sc.next();
-			sc.close();
 		
 	}
 		System.out.println();
 		System.out.println("Thank You for using Rectangle Calculator");
+		sc.close();
+
 	}
 }

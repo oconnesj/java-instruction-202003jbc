@@ -58,3 +58,12 @@ local.properties
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
+test/.project
+test/.classpath
+test/src/test.java
+ch04_ex4_FutureValue/.classpath
+ch04_ex4_FutureValue/.project
+ch04_ex4_FutureValue/src/FutureValueApp.java
+ch04_ex4_FutureValue_sol/.classpath
+ch04_ex4_FutureValue_sol/.project
+ch04_ex4_FutureValue_sol/src/FutureValueApp.java

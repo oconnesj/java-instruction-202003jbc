@@ -10,10 +10,17 @@ public class FactorialCalculatorApp {
 		while (choice.equalsIgnoreCase("y")) {
 			System.out.println();
 			System.out.print("Enter an integer that's greater than 0 and less than 10: ");
-			Long n = sc.nextLong();
-			int r = 3;
-			System.out.println("The Factorial of"+ " " +n +" "+ "is" +" "+ r );
+			long factorial = 1;
+			for 
+			
+			
+			
+			//System.out.println("The Factorial of"+ " " +n +" "+ "is" +" "+ r);
+				
+			}
+
+			 
 			  
 	}
 	}
-}
+

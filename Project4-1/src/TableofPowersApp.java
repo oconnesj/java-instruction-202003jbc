@@ -13,8 +13,6 @@ public class TableofPowersApp {
 			 int inputNumber = sc.nextInt();
 			System.out.println();
 			
-		
-			System.out.println();
 
 		    System.out.println("Number" + "    " + "Square" + "    " + "Cubed");
 		    System.out.println("======" + "    " + "======" + "    " + "=====");

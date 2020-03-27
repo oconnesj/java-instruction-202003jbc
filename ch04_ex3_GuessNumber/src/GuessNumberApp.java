@@ -37,7 +37,7 @@ public class GuessNumberApp {
 			}
 			count++;
 		}
-		System.out.println("You guessed it in " + count + "tries.\n");
+		System.out.println("You guessed it in " + count + " tries.\n");
 	
 	System.out.println("Bye!");
 	}

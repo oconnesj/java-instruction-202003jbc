@@ -30,44 +30,40 @@ public class TipCalculatorApp {
 
 			resultOne = optionOne * .15;
 			totalOne = resultOne + optionOne;
-			
+
 			resultTwo = optionOne * .20;
 			totalTwo = resultTwo + optionOne;
 
 			resultThree = optionOne * .25;
 			totalThree = resultThree + optionOne;
-			
-			
+
 			resultOne = new BigDecimal(resultOne).setScale(2, RoundingMode.HALF_UP).doubleValue();
 			resultTwo = new BigDecimal(resultTwo).setScale(2, RoundingMode.HALF_UP).doubleValue();
 			resultThree = new BigDecimal(resultThree).setScale(2, RoundingMode.HALF_UP).doubleValue();
 
-			
-			
 			NumberFormat currency = NumberFormat.getCurrencyInstance();
-            String resultOneString = currency.format(resultOne);
-            String totalOneString = currency.format(totalOne);
-            String resultTwoString = currency.format(resultTwo);
-            String totalTwoString = currency.format(totalTwo);
-            String resultThreeString = currency.format(resultThree);
-            String totalThreeString = currency.format(totalThree);
-            
+			String resultOneString = currency.format(resultOne);
+			String totalOneString = currency.format(totalOne);
+			String resultTwoString = currency.format(resultTwo);
+			String totalTwoString = currency.format(totalTwo);
+			String resultThreeString = currency.format(resultThree);
+			String totalThreeString = currency.format(totalThree);
+
 			System.out.println("15%");
-			System.out.println("Tip amount: " + resultOneString );
+			System.out.println("Tip amount: " + resultOneString);
 			System.out.println("Total: " + totalOneString);
 			System.out.println();
 			System.out.println("20%");
-			System.out.println("Tip amount: " + resultTwoString );
+			System.out.println("Tip amount: " + resultTwoString);
 			System.out.println("Total: " + totalTwoString);
 			System.out.println();
 			System.out.println("25%");
-			System.out.println("Tip amount: " + resultThreeString );
+			System.out.println("Tip amount: " + resultThreeString);
 			System.out.println("Total: " + totalThreeString);
-			
+
 			System.out.println();
-			System.out.print("Continue?" + " "+ "(y/n): ");
+			System.out.print("Continue?" + " " + "(y/n): ");
 			choice = sc.next();
-			
 
 		}
 		System.out.println("Thank You for using Tip Calculator");

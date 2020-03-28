@@ -2,59 +2,111 @@ import java.util.Scanner;
 
 public class BarAgeCheckerApp {
 	public static void main(String[] args) {
-		System.out.println("Hello, \nWhat would you like to drink?");
-		Scanner sc = new Scanner (System.in);
-		//insert blank line x2 
-		System.out.println();
-		System.out.println();
-		// begin menu 
-		String choice = " ";
-		while (!choice.equalsIgnoreCase("x")) {
-			//display the menu 
-			String menu = "MENU\n" +
-					  "============\n" +
-					  "W - Water\n" +
-					  "R - RootBeer\n" +
-					  "G - Gingerale\n" +
-					  "B - Beer\n" +
-					  "M - Martini\n" +
-					  "X - exit\n";
-			System.out.println(menu);
-			choice = sc.next();
-			// do something based on that choice 
-			switch (choice) {
-			
-			case "W":
-				System.out.println("Water Please");
-				break;
-			
-			case "R":
-				System.out.println("Rootbeer Pleae");
-				break;
-			case "G":
-				System.out.println("Gingerale Please");
-				break;
+		Scanner sc = new Scanner(System.in);
 
-			case "B":
-				System.out.println("Beer Please");
-				break;
+		String choice = "y";
+		while (choice.equalsIgnoreCase("y")) {
+			System.out.println("Welcome to the bar");
+			System.out.println();
 
-			case "M":
-				System.out.println("Martini Please");
-				break;
 
-			case "X":
-				break;
-			default:
-				System.out.println("INvalid Choice, try again.");
-				break;
-				
-		
+			System.out.println("Can I see your ID");
+			System.out.println();
+			System.out.print("Enter your Age: ");
+			int age = sc.nextInt();
+			System.out.println();
+
+
+			if (age < 21) {
+				System.out.println("You can order from this Menu");
+				System.out.println();
+
+				String menuChoice = " ";
+				while (!menuChoice.equalsIgnoreCase("x")) {
+					// display the menu
+					System.out.println();
+					String menu = "MENU\n" +
+							  "============\n" +
+							  "W - Water\n" +
+							  "R - RootBeer\n" +
+							  "G - Gingerale\n" +
+							  "X - exit\n";
+					System.out.println(menu);
+					menuChoice = sc.next();
+					// do something based on that choice
+					System.out.println();
+					switch (menuChoice) {
+					
+
+					case "W":
+						System.out.println("Water Please");
+						System.out.println();
+						break;
+
+					case "R":
+						System.out.println("Rootbeer Pleae");
+						System.out.println();
+						break;
+					case "G":
+						System.out.println("Gingerale Please");
+						System.out.println();
+						break;
+					case "X":
+						System.out.println("Thank you, come again");
+						System.out.println();
+						break;
+					default:
+						System.out.println("Invalid Choice, try again.");
+						System.out.println();
+						break;
+					// end switch menu
+					}
+					// end while
+				}
+
+			} else if (age >= 21) {
+				System.out.println("You can order from this Menu");
+				System.out.println();
+
+				String menuChoice = " ";
+				while (!menuChoice.equalsIgnoreCase("x")) {
+					// display the menu
+					System.out.println();
+					String menu = "MENU\n" +
+							  "============\n" +
+							  "B - Beer\n" +
+							  "M - Martini\n" +
+							  "X - exit\n";
+					System.out.println(menu);
+					menuChoice = sc.next();
+					// do something based on that choice
+					System.out.println();
+					switch (menuChoice) {
+					
+
+					case "B":
+						System.out.println("Beer Please");
+						break;
+
+					case "M":
+						System.out.println("Martini Please");
+						break;
+					case "X":
+						System.out.println("Thank you, come again");
+						System.out.println();
+						break;
+					default:
+						System.out.println("Invalid Choice, try again.");
+						System.out.println();
+						break;
+					// end switch menu
+					}
+					// end while
+				}
 			}
-			System.out.println(choice);
-			
-	}
-		System.out.println("Goodbye");
+		}
 
 	}
 }
+
+// do something based on that choice +

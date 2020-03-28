@@ -6,7 +6,7 @@ public class BarAgeCheckerApp {
 
 		String choice = "y";
 		while (choice.equalsIgnoreCase("y")) {
-			System.out.println("Welcome to the bar");
+			System.out.println("Welcome to Java Happy Hour");
 			System.out.println();
 
 
@@ -74,6 +74,9 @@ public class BarAgeCheckerApp {
 					System.out.println();
 					String menu = "MENU\n" +
 							  "============\n" +
+							  "W - Water\n" +
+							  "R - RootBeer\n" +
+							  "G - Gingerale\n" +
 							  "B - Beer\n" +
 							  "M - Martini\n" +
 							  "X - exit\n";
@@ -82,14 +85,30 @@ public class BarAgeCheckerApp {
 					// do something based on that choice
 					System.out.println();
 					switch (menuChoice) {
+					case "W":
+						System.out.println("Water Please");
+						System.out.println();
+						break;
+
+					case "R":
+						System.out.println("Rootbeer Pleae");
+						System.out.println();
+						break;
+					case "G":
+						System.out.println("Gingerale Please");
+						System.out.println();
+						break;
 					
 
 					case "B":
 						System.out.println("Beer Please");
+						System.out.println();
+
 						break;
 
 					case "M":
 						System.out.println("Martini Please");
+						System.out.println();
 						break;
 					case "X":
 						System.out.println("Thank you, come again");
@@ -104,8 +123,12 @@ public class BarAgeCheckerApp {
 					// end while
 				}
 			}
+			System.out.println();
+			System.out.print("Continue?" + " " + "(y/n): ");
+			choice = sc.next();
 		}
-
+		System.out.println("Thank You for using Bar Age Checker");
+		sc.close();
 	}
 }
 

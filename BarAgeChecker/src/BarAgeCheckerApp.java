@@ -1,4 +1,4 @@
-//v4.0 -- added Tip Calculator 
+//v4.1 -- added addition item Java juice Priced at 31.62 Java boot camp started on 3/16/20 
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

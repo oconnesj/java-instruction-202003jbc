@@ -1,3 +1,6 @@
+//v2.3 -- added additional drinks 
+
+
 import java.util.Scanner;
 
 public class BarAgeCheckerApp {
@@ -22,7 +25,7 @@ public class BarAgeCheckerApp {
 				System.out.println();
 
 				String menuChoice = " ";
-				while (!menuChoice.equalsIgnoreCase("x")) {
+				while (!menuChoice.equalsIgnoreCase("X")) {
 					// display the menu
 					System.out.println();
 					String menu = "MENU\n" +
@@ -30,12 +33,15 @@ public class BarAgeCheckerApp {
 							  "W - Water\n" +
 							  "R - RootBeer\n" +
 							  "G - Gingerale\n" +
+							  "J - Juice\n"+
+							  "RB - Redbull\n"+
 							  "X - exit\n";
 					System.out.println(menu);
 					menuChoice = sc.next();
 					// do something based on that choice
 					System.out.println();
 					switch (menuChoice) {
+					
 					
 
 					case "W":
@@ -51,16 +57,27 @@ public class BarAgeCheckerApp {
 						System.out.println("Gingerale Please");
 						System.out.println();
 						break;
-					case "X":
-						System.out.println("Thank you, come again");
+					case "J":
+						System.out.println("Juice Please");
 						System.out.println();
 						break;
+					case "RB":
+						System.out.println("Redbull Please");
+						System.out.println();
+						break;
+					
 					default:
 						System.out.println("Invalid Choice, try again.");
 						System.out.println();
 						break;
+					case "X":
+						System.out.println("Thank you, come again");
+						System.out.println();
+						break;
+						
 					// end switch menu
 					}
+
 					// end while
 				}
 
@@ -79,6 +96,10 @@ public class BarAgeCheckerApp {
 							  "G - Gingerale\n" +
 							  "B - Beer\n" +
 							  "M - Martini\n" +
+							  "T - Gin&Tonic\n" +
+							  "O - Old Fashioned\n"+
+							  "J - Juice\n"+
+							  "RB - Redbull\n"+
 							  "X - exit\n";
 					System.out.println(menu);
 					menuChoice = sc.next();
@@ -103,15 +124,32 @@ public class BarAgeCheckerApp {
 					case "B":
 						System.out.println("Beer Please");
 						System.out.println();
-
 						break;
 
 					case "M":
 						System.out.println("Martini Please");
 						System.out.println();
 						break;
+
+					case "T":
+						System.out.println("Gin & Tonic Please");
+						System.out.println();
+						break;
+					case "O":
+						System.out.println("Old Fashioned Please");
+						System.out.println();
+						break;
+					case "J":
+						System.out.println("Juice Please");
+						System.out.println();
+						break;
+					case "RB":
+						System.out.println("Redbull Please");
+						System.out.println();
+						break;
+					
 					case "X":
-						System.out.println("Thank you, come again");
+						System.out.println("Thank you, come again ");
 						System.out.println();
 						break;
 					default:

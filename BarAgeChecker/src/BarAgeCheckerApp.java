@@ -1,5 +1,8 @@
-//v3.0 -- tab calculator is working, removed extra blank line 
+//v4.0 -- added Tip Calculator 
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class BarAgeCheckerApp {
@@ -8,7 +11,9 @@ public class BarAgeCheckerApp {
 		Scanner sc = new Scanner(System.in);
 
 		String choice = "y";
-		
+		double tipAmountInt;
+		double tipAmountDec;
+		double totalAmount;
 		
 		while (choice.equalsIgnoreCase("y")) {
 			System.out.println("Welcome to Java Happy Hour\n");
@@ -20,6 +25,7 @@ public class BarAgeCheckerApp {
 			int age = sc.nextInt();
 			System.out.println();
 			Double Total = 0.0;
+
 
 
 			if (age < 21) {
@@ -52,30 +58,30 @@ public class BarAgeCheckerApp {
 
 					case "W":
 						System.out.println("Water Please\n");
-						double menuW  = 0.00;
+						Double menuW  = 0.00;
 						Total = Total + menuW;
 						break;
 
 					case "R":
 						System.out.println("Root beer Pleae\n");
-						double menuR  = 1.50;
+						Double menuR  = 1.50;
 						Total = Total + menuR;
 
 						break;
 					case "G":
 						System.out.println("Ginger ale Please\n");
-						double menuG  = 1.50;
+						Double menuG  = 1.50;
 						Total = Total + menuG;
 
 						break;
 					case "J":
 						System.out.println("Juice Please\n");
-						double menuJ  = 2.00;
+						Double menuJ  = 2.00;
 						Total = Total + menuJ;
 						break;
 					case "RB":
 						System.out.println("Redbull Please\n");
-						double menuRB  = 3.00;
+						Double menuRB  = 3.00;
 						Total = Total + menuRB;
 						break;
 					
@@ -120,54 +126,54 @@ public class BarAgeCheckerApp {
 					switch (menuChoice) {
 					case "W":
 						System.out.println("Water Please\n");
-						double menuW  = 0.00;
+						Double menuW  = 0.00;
 						Total = Total + menuW;
 						break;
 
 					case "R":
 						System.out.println("Root beer Pleae\n");
-						double menuR  = 1.50;
+						Double menuR  = 1.50;
 						Total = Total + menuR;
 
 						break;
 					case "G":
 						System.out.println("Ginger ale Please\n");
-						double menuG  = 1.50;
+						Double menuG  = 1.50;
 						Total = Total + menuG;
 
 						break;
 					case "J":
 						System.out.println("Juice Please\n");
-						double menuJ  = 2.00;
+						Double menuJ  = 2.00;
 						Total = Total + menuJ;
 						break;
 					case "RB":
 						System.out.println("Redbull Please\n");
-						double menuRB  = 3.00;
+						Double menuRB  = 3.00;
 						Total = Total + menuRB;
 						break;
 
 					case "B":
 						System.out.println("Beer Please\n");
-						double menuB  = 6.00;
+						Double menuB  = 6.00;
 						Total = Total + menuB;
 						break;
 
 					case "M":
 						System.out.println("Martini Please\n");
-						double menuM  = 7.50;
+						Double menuM  = 7.50;
 						Total = Total + menuM;
 
 						break;
 
 					case "T":
 						System.out.println("Gin & Tonic Please\n");
-						double menuT  = 8.00;
+						Double menuT  = 8.00;
 						Total = Total + menuT;
 						break;
 					case "O":
 						System.out.println("Old Fashioned Please\n");
-						double menuO  = 6.50;
+						Double menuO  = 6.50;
 						Total = Total + menuO;
 						break;
 
@@ -184,8 +190,40 @@ public class BarAgeCheckerApp {
 				}
 
 			} // Possible spot for additional logic to calculate drink tab 
-			System.out.println("Total Bill: " + Total);
+			Total = new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+			new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+			NumberFormat currency = NumberFormat.getCurrencyInstance();
 
+			String TotalString = currency.format(Total);
+
+			
+			
+			System.out.println("Total Bill: " + TotalString);
+			System.out.println();
+			System.out.print("Enter tip % amount: ");
+			tipAmountInt = sc.nextInt();
+			tipAmountDec = (tipAmountInt / 100) * Total;
+			// System.out.println(tipAmountDec); for debuging
+			totalAmount = tipAmountDec + Total;
+
+			tipAmountDec = new BigDecimal(tipAmountDec).setScale(2, RoundingMode.HALF_UP).doubleValue();
+			new BigDecimal(tipAmountDec).setScale(2, RoundingMode.HALF_UP).doubleValue();
+
+			totalAmount = new BigDecimal(totalAmount).setScale(2, RoundingMode.HALF_UP).doubleValue();
+			new BigDecimal(totalAmount).setScale(2, RoundingMode.HALF_UP).doubleValue();
+
+			NumberFormat currency2 = NumberFormat.getCurrencyInstance();
+			String tipAmountString = currency2.format(tipAmountDec);
+
+			String totalAmountString = currency.format(totalAmount);
+			
+			System.out.println();
+			System.out.println("Tip amount: " + tipAmountString);
+			System.out.println();
+			System.out.println("Total amount: " + totalAmountString);
+
+	
+			
 			System.out.println();
 			System.out.print("Continue?" + " " + "(y/n): ");
 			choice = sc.next();

@@ -1,5 +1,4 @@
-//v4.1 -- added addition item Java juice Priced at 31.62 Java boot camp started on 3/16/20 
-
+//v4.3 -- added prices to Menu moved total price string so it can be seen after each order 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
@@ -35,18 +34,16 @@ public class BarAgeCheckerApp {
 				//Beginning of drink variables 
 				
 				
-				
 				while (!menuChoice.equalsIgnoreCase("X")) {
 
 					// display the menu
 					System.out.println();
 					String menu = "MENU\n" +
 							  "============\n" +
-							  "W - Water\n" +
-							  "R - Root Beer\n" +
-							  "G - Ginger ale\n" +
-							  "J - Juice\n"+
-							  "RB - Redbull\n"+
+							  "W - Water Price| $0.00\n" +
+							  "R - Root Beer Price| $1.50\n" +
+							  "G - Ginger Ale Price| $1.50\n" + 
+							  "J - Juice Price| $2.00\n"+
 							  "X - exit\n";
 					System.out.println(menu);
 					menuChoice = sc.next();
@@ -94,8 +91,14 @@ public class BarAgeCheckerApp {
 						
 					// end switch menu
 					}
+					Total = new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+					new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+					NumberFormat currency = NumberFormat.getCurrencyInstance();
+
+					String TotalString = currency.format(Total);
+					System.out.println("Total Bill: " + TotalString);
 				}	// end while
-				
+
 				}
 				else if (age >= 21) {
 				System.out.println("You can order from this Menu");
@@ -107,16 +110,16 @@ public class BarAgeCheckerApp {
 					System.out.println();
 					String menu = "MENU\n" +
 							  "============\n" +
-							  "W - Water\n" +
-							  "R - Root Beer\n" +
-							  "G - Ginger ale\n" +
-							  "J - Juice\n"+
-							  "RB - Redbull\n"+
-							  "B - Beer\n" +
-							  "M - Martini\n" +
-							  "T - Gin & Tonic\n" +
-							  "O - Old Fashioned\n"+
-							  "JJ - Java Juice\n"+
+							  "W - Water Price| $0.00\n" +
+							  "R - Root Beer Price| $1.50\n" +
+							  "G - Ginger Ale Price| $1.50\n" + 
+							  "J - Juice Price| $2.00\n"+
+							  "RB - Redbull Price| $3.00\n"+
+							  "B - Beer Price| $6.00\n"+
+							  "M - Martini Price| $7.50\n" +
+							  "T - Gin & Tonic Price| $8.00\n" +
+							  "O - Old Fashioned Price| $6.50\n"+
+							  "JJ - Java Juice Price| $31.62\n"+
 
 							  "X - exit\n";
 					System.out.println(menu);
@@ -191,19 +194,22 @@ public class BarAgeCheckerApp {
 						break;
 					// end switch menu
 					}
+					Total = new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+					new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
+					NumberFormat currency = NumberFormat.getCurrencyInstance();
+
+					String TotalString = currency.format(Total);
+					System.out.println("Total Bill: " + TotalString);
+
 					// end while
+
 				}
 
 			} // Possible spot for additional logic to calculate drink tab 
-			Total = new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
-			new BigDecimal(Total).setScale(2, RoundingMode.HALF_UP).doubleValue();
-			NumberFormat currency = NumberFormat.getCurrencyInstance();
-
-			String TotalString = currency.format(Total);
+		
 
 			
 			
-			System.out.println("Total Bill: " + TotalString);
 			System.out.println();
 			System.out.print("Enter tip % amount: ");
 			tipAmountInt = sc.nextInt();
@@ -220,7 +226,7 @@ public class BarAgeCheckerApp {
 			NumberFormat currency2 = NumberFormat.getCurrencyInstance();
 			String tipAmountString = currency2.format(tipAmountDec);
 
-			String totalAmountString = currency.format(totalAmount);
+			String totalAmountString = currency2.format(totalAmount);
 			
 			System.out.println();
 			System.out.println("Tip amount: " + tipAmountString);

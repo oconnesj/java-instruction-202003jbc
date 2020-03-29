@@ -116,6 +116,7 @@ public class BarAgeCheckerApp {
 							  "M - Martini\n" +
 							  "T - Gin & Tonic\n" +
 							  "O - Old Fashioned\n"+
+							  "JJ - Java Juice\n"+
 
 							  "X - exit\n";
 					System.out.println(menu);
@@ -176,7 +177,11 @@ public class BarAgeCheckerApp {
 						Double menuO  = 6.50;
 						Total = Total + menuO;
 						break;
-
+					case "JJ":
+						System.out.println("Java Juice Please\n");
+						Double menuJJ  = 31.62;
+						Total = Total + menuJJ;
+						break;
 					
 					case "X":
 						System.out.println("Thank you, come again\n");

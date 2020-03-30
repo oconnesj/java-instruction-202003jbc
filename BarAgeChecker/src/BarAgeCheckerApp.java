@@ -1,4 +1,4 @@
-//v4.5 -- added additional items 
+//v4.6 -- changed closing message
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
@@ -276,7 +276,7 @@ public class BarAgeCheckerApp {
 			System.out.print("Continue?" + " " + "(y/n): ");
 			choice = sc.next();
 		}
-		System.out.println("Thank You for using Bar Age Checker");
+		System.out.println("Thank You for coming to Java Happy Hour");
 		sc.close();
 	
 	}	

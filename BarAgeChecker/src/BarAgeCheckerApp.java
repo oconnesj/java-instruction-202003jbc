@@ -1,4 +1,5 @@
-//v4.6 -- changed closing message
+//v4.8 -- menu can now be used with lower case characters 
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
@@ -56,46 +57,50 @@ public class BarAgeCheckerApp {
 					switch (menuChoice) {
 					
 					
-
+					case "w":
 					case "W":
 						System.out.println("Water Please\n");
 						Double menuW  = 0.00;
 						Total = Total + menuW;
 						break;
-
+						
+					case "r":
 					case "R":
 						System.out.println("Root beer Pleae\n");
 						Double menuR  = 1.50;
 						Total = Total + menuR;
-
 						break;
+					case "g":
 					case "G":
 						System.out.println("Ginger ale Please\n");
 						Double menuG  = 1.50;
 						Total = Total + menuG;
-
 						break;
+					case "j":
 					case "J":
 						System.out.println("Juice Please\n");
 						Double menuJ  = 2.00;
 						Total = Total + menuJ;
 						break;
+					case "rb":	
 					case "RB":
 						System.out.println("Redbull Please\n");
 						Double menuRB  = 3.00;
 						Total = Total + menuRB;
 						break;
-
+					case "mm":
 					case "MM":
 						System.out.println("Mango Mule Mocktail Please\n");
 						Double menuMM  = 7.15;
 						Total = Total + menuMM;
 						break;
+					case "cf":	
 					case "CF":
 						System.out.println("Citrus Fizz Mocktail Please\n");
 						Double menuCF  = 6.30;
 						Total = Total + menuCF;
 						break;
+					case "vc":	
 					case "VC":
 						System.out.println("Virgin Cucumber Gimlet Mocktail Please\n");
 						Double menuVC  = 8.35;
@@ -104,6 +109,7 @@ public class BarAgeCheckerApp {
 					default:
 						System.out.println("Invalid Choice, try again.\n");
 						break;
+					case "x":
 					case "X":
 						System.out.println("Thank you, come again\n");
 						break;
@@ -150,82 +156,91 @@ public class BarAgeCheckerApp {
 					// do something based on that choice
 					System.out.println();
 					switch (menuChoice) {
+					case "w":
 					case "W":
 						System.out.println("Water Please\n");
 						Double menuW  = 0.00;
 						Total = Total + menuW;
 						break;
-
+						
+					case "r":
 					case "R":
 						System.out.println("Root beer Pleae\n");
 						Double menuR  = 1.50;
 						Total = Total + menuR;
-
 						break;
+					case "g":
 					case "G":
 						System.out.println("Ginger ale Please\n");
 						Double menuG  = 1.50;
 						Total = Total + menuG;
-
 						break;
+					case "j":
 					case "J":
 						System.out.println("Juice Please\n");
 						Double menuJ  = 2.00;
 						Total = Total + menuJ;
 						break;
+					case "rb":	
 					case "RB":
 						System.out.println("Redbull Please\n");
 						Double menuRB  = 3.00;
 						Total = Total + menuRB;
 						break;
+					case "mm":
 					case "MM":
 						System.out.println("Mango Mule Mocktail Please\n");
 						Double menuMM  = 7.15;
 						Total = Total + menuMM;
 						break;
+					case "cf":	
 					case "CF":
 						System.out.println("Citrus Fizz Mocktail Please\n");
 						Double menuCF  = 6.30;
 						Total = Total + menuCF;
 						break;
+					case "vc":	
 					case "VC":
 						System.out.println("Virgin Cucumber Gimlet Mocktail Please\n");
 						Double menuVC  = 8.35;
 						Total = Total + menuVC;
 						break;
-
+					case "b":
 					case "B":
 						System.out.println("Beer Please\n");
 						Double menuB  = 6.00;
 						Total = Total + menuB;
 						break;
-
+					case "m":
 					case "M":
 						System.out.println("Martini Please\n");
 						Double menuM  = 7.50;
 						Total = Total + menuM;
 
 						break;
-
+					case "t":
 					case "T":
 						System.out.println("Gin & Tonic Please\n");
 						Double menuT  = 8.00;
 						Total = Total + menuT;
 						break;
+					case "o":	
 					case "O":
 						System.out.println("Old Fashioned Please\n");
 						Double menuO  = 6.50;
 						Total = Total + menuO;
 						break;
+					case "jj":	
 					case "JJ":
 						System.out.println("Java Juice Please\n");
 						Double menuJJ  = 31.62;
 						Total = Total + menuJJ;
 						break;
-					
+					case "x":
 					case "X":
 						System.out.println("Thank you, come again\n");
 						break;
+						
 					default:
 						System.out.println("Invalid Choice, try again.\n");
 						break;

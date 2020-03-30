@@ -1,4 +1,4 @@
-//v4.3 -- added prices to Menu moved total price string so it can be seen after each order 
+//v4.5 -- added additional items 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
@@ -44,6 +44,10 @@ public class BarAgeCheckerApp {
 							  "R - Root Beer Price| $1.50\n" +
 							  "G - Ginger Ale Price| $1.50\n" + 
 							  "J - Juice Price| $2.00\n"+
+							  "RB - Redbull Price| $3.00\n"+
+							  "MM - Mango Mule Mocktail Price| $7.15\n"+
+							  "CF - Citrus Fizz Mocktail Price| $6.30\n"+
+							  "VC - Virgin Cucumber Gimlet Mocktail Price $8.35\n"+
 							  "X - exit\n";
 					System.out.println(menu);
 					menuChoice = sc.next();
@@ -81,7 +85,22 @@ public class BarAgeCheckerApp {
 						Double menuRB  = 3.00;
 						Total = Total + menuRB;
 						break;
-					
+
+					case "MM":
+						System.out.println("Mango Mule Mocktail Please\n");
+						Double menuMM  = 7.15;
+						Total = Total + menuMM;
+						break;
+					case "CF":
+						System.out.println("Citrus Fizz Mocktail Please\n");
+						Double menuCF  = 6.30;
+						Total = Total + menuCF;
+						break;
+					case "VC":
+						System.out.println("Virgin Cucumber Gimlet Mocktail Please\n");
+						Double menuVC  = 8.35;
+						Total = Total + menuVC;
+						break;
 					default:
 						System.out.println("Invalid Choice, try again.\n");
 						break;
@@ -115,6 +134,9 @@ public class BarAgeCheckerApp {
 							  "G - Ginger Ale Price| $1.50\n" + 
 							  "J - Juice Price| $2.00\n"+
 							  "RB - Redbull Price| $3.00\n"+
+							  "MM - Mango Mule Mocktail Price| $7.15\n"+
+							  "CF - Citrus Fizz Mocktail Price| $6.30\n"+
+							  "VC - Virgin Cucumber Gimlet Mocktail Price $8.35\n"+
 							  "B - Beer Price| $6.00\n"+
 							  "M - Martini Price| $7.50\n" +
 							  "T - Gin & Tonic Price| $8.00\n" +
@@ -155,6 +177,21 @@ public class BarAgeCheckerApp {
 						System.out.println("Redbull Please\n");
 						Double menuRB  = 3.00;
 						Total = Total + menuRB;
+						break;
+					case "MM":
+						System.out.println("Mango Mule Mocktail Please\n");
+						Double menuMM  = 7.15;
+						Total = Total + menuMM;
+						break;
+					case "CF":
+						System.out.println("Citrus Fizz Mocktail Please\n");
+						Double menuCF  = 6.30;
+						Total = Total + menuCF;
+						break;
+					case "VC":
+						System.out.println("Virgin Cucumber Gimlet Mocktail Please\n");
+						Double menuVC  = 8.35;
+						Total = Total + menuVC;
 						break;
 
 					case "B":
@@ -223,10 +260,10 @@ public class BarAgeCheckerApp {
 			totalAmount = new BigDecimal(totalAmount).setScale(2, RoundingMode.HALF_UP).doubleValue();
 			new BigDecimal(totalAmount).setScale(2, RoundingMode.HALF_UP).doubleValue();
 
-			NumberFormat currency2 = NumberFormat.getCurrencyInstance();
-			String tipAmountString = currency2.format(tipAmountDec);
+			NumberFormat currency = NumberFormat.getCurrencyInstance();
+			String tipAmountString = currency.format(tipAmountDec);
 
-			String totalAmountString = currency2.format(totalAmount);
+			String totalAmountString = currency.format(totalAmount);
 			
 			System.out.println();
 			System.out.println("Tip amount: " + tipAmountString);

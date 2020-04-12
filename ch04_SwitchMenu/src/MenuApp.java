@@ -43,9 +43,11 @@ public class MenuApp {
 				System.out.println("INvalid Choice, try again.");
 				break;	
 			}
-			
+			System.out.println();
+			System.out.print("Continue?" + " " + "(y/n): ");
+			choice = sc.next();
 		}
-		
+		sc.close();
 		System.out.println("Goodbye");
 		
 		

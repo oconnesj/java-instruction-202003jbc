@@ -44,6 +44,7 @@ public class TipCalculatorCustomApp {
 			choice = sc.next();
 		}
 			System.out.println("Thank You for using Tip Calculator");
+			
 			sc.close();
 
 		

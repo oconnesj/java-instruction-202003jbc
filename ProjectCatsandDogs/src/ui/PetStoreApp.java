@@ -18,8 +18,7 @@ public class PetStoreApp {
 		PetRandomAge age = new PetRandomAge();
 
 		System.out.println("Welcome to the Pet Store App");
-		System.out
-				.println("This application will manage a list of pets. You can add pets to the inventory, and remove\n"
+		System.out.println("This application will manage a list of pets. You can add pets to the inventory, and remove\n"
 						+ "them when they get adopted");
 
 		System.out.println();
@@ -27,10 +26,12 @@ public class PetStoreApp {
 		Pet p1 = new Pet(1, " Goat", " Nigerian Dwarf Goat", " Fred", age.roll());
 		Pet p2 = new Pet(2, " Bird", " Cockatiel", " Dumpling", age.roll());
 		Pet p3 = new Pet(3, " Cat", " Russian Blue ", " Lucy", age.roll());
+		Pet p4 = new Pet(4, " Dog", " Labador Retriever", "Pike", age.roll());
 
 		pets.add(p1);
 		pets.add(p2);
 		pets.add(p3);
+		pets.add(p4);
 
 		String command = "";
 		System.out.println();
@@ -58,8 +59,9 @@ public class PetStoreApp {
 		System.out.println("Bye");
 	}
 
-	private static void adoptPet() { // TODO Auto-generated method stub
+	private static void adoptPet() {
 		// prompt user for id and get the pet
+		System.out.println();
 		System.out.println("Pet Adoption");
 		System.out.println("==============");
 		int id = Console.getInt("Id of pet to adopt?  ", 0, (int) Double.POSITIVE_INFINITY);
@@ -69,24 +71,24 @@ public class PetStoreApp {
 			if (p.getId() == id) {
 				removePet = p;
 
-			} 
-		}
-			if (removePet != null) {
-				pets.remove(removePet);
-				System.out.println(removePet.getName() + " has been adopted.");
-			} else {
-				System.out.println("Not pet matches Id entered.");
-				System.out.println("Please try again");
 			}
 		}
+		if (removePet != null) {
+			pets.remove(removePet);
+			System.out.println(removePet.getName() + " has been adopted.");
+		} else {
+			System.out.println("Not pet matches Id entered.");
+			System.out.println("Please try again");
+		}
+	}
 
-	
-
-	private static void addPet() { // TODO Auto-generated method stub
+	private static void addPet() {
+		System.out.println();
 		System.out.println("Add a Pet to inventory");
-		System.out.println("=================");
+		System.out.println("======================");
 		System.out.println();
 		int id = Console.getInt("Pet Id?  ", 0, (int) Double.POSITIVE_INFINITY);
+
 		String type = Console.getString("Type?  ", true);
 		String species = Console.getString("Species?  ", true);
 		String name = Console.getString("Name?  ", true);
@@ -97,10 +99,10 @@ public class PetStoreApp {
 		pets.add(p);
 		System.out.println();
 		System.out.println("Pet Added");
-
 	}
 
-	private static void listPets() { // TODO Auto-generated method stub
+	private static void listPets() {
+		System.out.println();
 		System.out.println("Pets in inventory");
 		System.out.println("=================");
 		System.out.println();
@@ -113,7 +115,7 @@ public class PetStoreApp {
 	}
 
 	private static void displayMenu() {
-
+		System.out.println();
 		StringBuilder menu = new StringBuilder("COMMAND MENU\n");
 		System.out.println("======================");
 

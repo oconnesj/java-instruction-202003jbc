@@ -8,7 +8,7 @@ public class PetRandomAge {
 	}
 	
 	public int roll() {
-		return value = (int) (Math.random() * 6) + 1;
+		return value = (int) (Math.random() * 10) + 1;
 	}
 	
 	public int getValue() {
